@@ -1,0 +1,46 @@
+{
+  "name": "Fast-foot-fast-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack-dev-server -d --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okoroemeka/Fast-foot-fast-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okoroemeka/Fast-foot-fast-react/issues"
+  },
+  "homepage": "https://github.com/okoroemeka/Fast-foot-fast-react#readme",
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router": "^4.3.1",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.4.4",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.12.0",
+    "eslint-loader": "^2.1.1",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^2.0.7",
+    "style-loader": "^0.23.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
