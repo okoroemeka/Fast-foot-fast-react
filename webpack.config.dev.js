@@ -4,7 +4,8 @@ const baseConfig = require('./webpack.config.base');
 module.exports = merge(baseConfig, {
   mode: 'development',
   devServer: {
-    port: 4000
+    port: 5000,
+    historyApiFallback: true,
   },
   devtool: "source-map",
 });
