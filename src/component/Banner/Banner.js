@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 // import "./Banner.css";
 
 const Banner = () => (
@@ -19,12 +20,12 @@ const Banner = () => (
               </div>
               <div className="row landing-page-button-container">
                 <div className="col-12 home-buttons">
-                  <a href="signup.html" id="sign-up">
+                  <Link to="signup" id="landingPage-sign-up">
                     Sign up
-                  </a>
-                  <a href="login.html" id="logIn-button">
+                  </Link>
+                  <Link to="login" id="landingPage-logIn-button">
                     Log In
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

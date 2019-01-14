@@ -114,8 +114,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#sign-up,
-#logIn-button {
+#landingPage-sign-up,
+#landingPage-logIn-button {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
@@ -129,12 +129,12 @@ body {
   border-radius: 3px;
   transition-duration: 0.5s;
 }
-#sign-up {
+#landingPage-sign-up {
   background-color: #0099cc;
   font-weight: lighter;
   margin-bottom: 5px;
 }
-#logIn-button {
+#landingPage-logIn-button {
   background-color: #ff9900;
 }
 .caption-container {
@@ -195,6 +195,15 @@ body {
   font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
+/* Signin style */
+/* .signIn-container{
+	background-image:  url('../assets/images/image2.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Tahoma, sans-serif;
+} */
 /* footer style */
 .footer-container {
   padding: 0px;
@@ -261,11 +270,11 @@ body {
     width: 25%;
   }
   #logIn-page-button:hover,
-  #sign-up:hover {
+  #landingPage-sign-up:hover {
     cursor: pointer;
     background-color: #0066ff;
   }
-  #logIn-button:hover {
+  #landingPage-logIn-button:hover {
     cursor: pointer;
     background-color: #e68a00;
   }

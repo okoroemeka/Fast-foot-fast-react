@@ -4,7 +4,7 @@ import FoodCardAreaHeader from '../../component/PopularFood/FoodCardAreaHeader';
 import CardWrapper from '../../container/Utility/CardWrapper';
 import NavigationBar from '../../component/NavBar/NavigationLandingPage';
 import Footer from '../../container/Footer';
-import './Landing.css'
+import './Style.css'
 
 const LandingPage = () => {
   return (
@@ -13,7 +13,7 @@ const LandingPage = () => {
     <Banner />
     <FoodCardAreaHeader />
     <CardWrapper />
-    <Footer />
+    {/* <Footer /> */}
   </div>
   );
 };
