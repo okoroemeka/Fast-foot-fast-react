@@ -1,4 +1,5 @@
-.signin-container{
+.signin-container,
+.signupForm-container{
   width: 100%;
   min-height: 100vh;
   background-image:  url('../../../assets/images/image2.jpg');
@@ -8,7 +9,8 @@
 	background-attachment: fixed;
 	font-family: Tahoma, sans-serif;
 }
-.signin-overlay{
+.signin-overlay,
+.signup-overlay{
   width: 100%;
 	min-height: 100vh;
 	overflow: auto;
@@ -116,7 +118,7 @@
 }
 /*sign up page style*/
 .sub-container{
-	/* margin-bottom: 10%; */
+	margin-bottom: 10%;
 }
 /* alert box style */
 .alert-box{
