@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
-    "start:dev": "webpack-dev-server --config webpack.config.dev.js --open"
+    "start:dev": "webpack-dev-server --config webpack.config.dev.js --open",
+    "test": "jest",
+    "coverage": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,8 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.4.4",
+    "axios-mock-adapter": "^1.16.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
