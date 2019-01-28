@@ -1,0 +1,1 @@
+export const foodItems = (state) => state.foods;

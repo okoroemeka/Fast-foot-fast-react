@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>6/6</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -158,11 +158,14 @@
 113
 114
 115
-116</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+116
+117
+118
+119
+120
+121
+122</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -170,19 +173,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -269,15 +270,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React, { Component } from "react";</span>
-<span class="cstat-no" title="statement not covered" >import { Link } from 'react-router-dom';</span>
-<span class="cstat-no" title="statement not covered" >import { connect } from 'react-redux';</span>
-import { withRouter } from 'react-router-dom';
-<span class="cstat-no" title="statement not covered" >import { signupUser } from '../../../actions/index';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 class SignUp extends Component {
   state = {
     fullname: '',
@@ -285,17 +294,17 @@ class SignUp extends Component {
     password: '',
     confirmPassword: ''
   };
-  handleInputChange = (event) =&gt;<span class="cstat-no" title="statement not covered" >{</span>
-    const {name, value} = <span class="cstat-no" title="statement not covered" >event.target;</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({...this.state,[name]: value});</span>
+  handleInputChange = (event) =&gt;{
+    const {name, value} = event.target;
+    this.setState({...this.state,[name]: value});
   }
-  handleSubmit = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (event) =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    event.preventDefault();</span>
-    const <span class="cstat-no" title="statement not covered" >response = await this.props.signupUser(this.state);</span>
-<span class="cstat-no" title="statement not covered" >    this.props.history.push('/menu');</span>
+  handleSubmit = async (event) =&gt; {
+    event.preventDefault();
+    const response = await this.props.signupUser(this.state);
+    this.props.history.push('/menu');
   }
   render() {
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;div className="row sub-container"&gt;
         &lt;div className="col-10"&gt;
           &lt;div className="row signup-form-container"&gt;
@@ -310,55 +319,67 @@ class SignUp extends Component {
                 &lt;/div&gt;
                 &lt;div className="row"&gt;
                   &lt;div className="col-12 form-input"&gt;
-                    &lt;p&gt;Full name&lt;/p&gt;
+                    &lt;label htmlFor="fullname"&gt;
+                      Full name
                     &lt;input
                       type="text"
                       name="fullname"
+                      id="fullname"
                       value={this.state.fullname}
                       placeholder="Enter full name"
                       required="required"
                       onChange={this.handleInputChange}
                     /&gt;
+                    &lt;/label&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div className="row"&gt;
                   &lt;div className="col-12 form-input"&gt;
-                    &lt;p&gt;Email&lt;/p&gt;
+                    &lt;label htmlFor="email"&gt;
+                      Email
                     &lt;input
                       type="Email"
                       name="email"
+                      id="email"
                       value={this.state.email}
                       placeholder="Enter Email"
                       required="required"
                       onChange={this.handleInputChange}
                     /&gt;
+                    &lt;/label&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
 &nbsp;
                 &lt;div className="row password-input"&gt;
                   &lt;div className="col-12 form-input"&gt;
-                    &lt;p&gt;Password&lt;/p&gt;
+                    &lt;label htmlFor="password"&gt;
+                      Password
                     &lt;input
                       type="Password"
                       name="password"
+                      id="password"
                       placeholder="Enter Password"
                       value={this.state.password}
                       required="required"
                       onChange={this.handleInputChange}
                     /&gt;
+                    &lt;/label&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div className="row password-input"&gt;
                   &lt;div className="col-12 form-input"&gt;
-                    &lt;p&gt;Confirm Password&lt;/p&gt;
+                    &lt;label htmlFor="confirmPassword"&gt;
+                    Confirm Password
                     &lt;input
                       type="Password"
                       name="confirmPassword"
+                      id="confirmPassword"
                       value={this.state.confirmPassword}
                       placeholder="Enter Password again"
                       required="required"
                       onChange={this.handleInputChange}
                     /&gt;
+                    &lt;/label&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div className="row"&gt;
@@ -384,17 +405,14 @@ class SignUp extends Component {
     );
   }
 }
-const <span class="fstat-no" title="function not covered" >mapStateToProps = <span class="cstat-no" title="statement not covered" >(</span>state) =&gt;{</span>
-<span class="cstat-no" title="statement not covered" >  return {userToken: state.auth}</span>
-}
-export default withRouter(connect(mapStateToProps, {signupUser})(SignUp));
+export default SignUp;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jan 15 2019 12:11:53 GMT+0100 (West Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 03 2019 11:39:33 GMT+0100 (West Africa Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

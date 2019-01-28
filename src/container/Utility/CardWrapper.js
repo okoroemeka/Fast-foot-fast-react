@@ -23,10 +23,4 @@ class cardWrapper extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    meals: state.foods
-  }
-}
-
-export default connect(mapStateToProps, {getAllAvailableFood})(cardWrapper);
+export default cardWrapper;

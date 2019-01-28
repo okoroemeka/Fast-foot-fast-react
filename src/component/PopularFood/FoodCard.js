@@ -1,7 +1,6 @@
 import React from "react";
 const foodCard = props => (
   <div className="card">
-    {/* <img src={props.mealImage} className='foodImage' alt={props.foodName}/> */}
     <div className="col-12">
       <a href="menu.html">
         <img

@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="row hero-container"
+      >
+        <div
+          class="col-12 hero"
+          id="hero"
+        >
+          <div
+            class="row overlay-container"
+          >
+            <div
+              class="col-12"
+              id="hero-overlay"
+            >
+              <div
+                class="row caption-container"
+              >
+                <div
+                  class="col-10 caption"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-12"
+                    >
+                      <p
+                        id="home-page-text"
+                      >
+                        Home of beautiful Intercontinental cuisins and fast delivery.
+                      </p>
+                      <p
+                        id="home-page-signup-text"
+                      >
+                        Sign up and lets feed you
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="row landing-page-button-container"
+                  >
+                    <div
+                      class="col-12 home-buttons"
+                    >
+                      <a
+                        href="/signup"
+                        id="landingPage-sign-up"
+                      >
+                        Sign up
+                      </a>
+                      <a
+                        href="/login"
+                        id="landingPage-logIn-button"
+                      >
+                        Log In
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="row hero-container"
+    >
+      <div
+        class="col-12 hero"
+        id="hero"
+      >
+        <div
+          class="row overlay-container"
+        >
+          <div
+            class="col-12"
+            id="hero-overlay"
+          >
+            <div
+              class="row caption-container"
+            >
+              <div
+                class="col-10 caption"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="col-12"
+                  >
+                    <p
+                      id="home-page-text"
+                    >
+                      Home of beautiful Intercontinental cuisins and fast delivery.
+                    </p>
+                    <p
+                      id="home-page-signup-text"
+                    >
+                      Sign up and lets feed you
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row landing-page-button-container"
+                >
+                  <div
+                    class="col-12 home-buttons"
+                  >
+                    <a
+                      href="/signup"
+                      id="landingPage-sign-up"
+                    >
+                      Sign up
+                    </a>
+                    <a
+                      href="/login"
+                      id="landingPage-logIn-button"
+                    >
+                      Log In
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -6,7 +6,9 @@ import thunk from 'redux-thunk';
 import reducers from '../reducers/index';
 import App from './App'
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
+const cartInitialState = window.localStorage.getItem('meals') ?
+  JSON.parse(window.localStorage.getItem('meals')) : {}
+const store = createStore(reducers, {cart: cartInitialState}, composeEnhancers(applyMiddleware(thunk)));
 render(
   <Provider store={store}>
     <App />

@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { signupUser } from '../../../actions/index';
 class SignUp extends Component {
   state = {
     fullname: '',
@@ -35,55 +32,67 @@ class SignUp extends Component {
                 </div>
                 <div className="row">
                   <div className="col-12 form-input">
-                    <p>Full name</p>
+                    <label htmlFor="fullname">
+                      Full name
                     <input
                       type="text"
                       name="fullname"
+                      id="fullname"
                       value={this.state.fullname}
                       placeholder="Enter full name"
                       required="required"
                       onChange={this.handleInputChange}
                     />
+                    </label>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12 form-input">
-                    <p>Email</p>
+                    <label htmlFor="email">
+                      Email
                     <input
                       type="Email"
                       name="email"
+                      id="email"
                       value={this.state.email}
                       placeholder="Enter Email"
                       required="required"
                       onChange={this.handleInputChange}
                     />
+                    </label>
                   </div>
                 </div>
 
                 <div className="row password-input">
                   <div className="col-12 form-input">
-                    <p>Password</p>
+                    <label htmlFor="password">
+                      Password
                     <input
                       type="Password"
                       name="password"
+                      id="password"
                       placeholder="Enter Password"
                       value={this.state.password}
                       required="required"
                       onChange={this.handleInputChange}
                     />
+                    </label>
                   </div>
                 </div>
                 <div className="row password-input">
                   <div className="col-12 form-input">
-                    <p>Confirm Password</p>
+                    <label htmlFor="confirmPassword">
+                    Confirm Password
                     <input
                       type="Password"
                       name="confirmPassword"
+                      id="confirmPassword"
                       value={this.state.confirmPassword}
                       placeholder="Enter Password again"
                       required="required"
                       onChange={this.handleInputChange}
                     />
+                    </label>
                   </div>
                 </div>
                 <div className="row">
@@ -109,7 +118,4 @@ class SignUp extends Component {
     );
   }
 }
-const mapStateToProps = (state) =>{
-  return {userToken: state.auth}
-}
-export default withRouter(connect(mapStateToProps, {signupUser})(SignUp));
+export default SignUp;
