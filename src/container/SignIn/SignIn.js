@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import SigninFormArea from "../../component/SignIn/Signin";
+import SigninFormArea from "../../component/SignIn/SigninConnect";
 import NavigationBar from "../../component/SignIn/NavBar";
 import "./SignIn.css";
 class FormWrapper extends Component {
-  componentDidMount() {}
   render() {
     return (
       <div className="signin-container">

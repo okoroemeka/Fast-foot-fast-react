@@ -195,16 +195,6 @@ body {
   font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* Signin style */
-/* .signIn-container{
-	background-image:  url('../assets/images/image2.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	font-family: Tahoma, sans-serif;
-} */
-/* footer style */
 .footer-container {
   padding: 0px;
 }

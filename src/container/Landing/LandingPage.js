@@ -1,9 +1,8 @@
 import React from 'react';
 import Banner from '../../component/Banner/Banner';
 import FoodCardAreaHeader from '../../component/PopularFood/FoodCardAreaHeader';
-import CardWrapper from '../../container/Utility/CardWrapper';
+import CardWrapper from '../Utility/CardWrapperConnect';
 import NavigationBar from '../../component/NavBar/NavigationLandingPage';
-import Footer from '../../container/Footer';
 import './Style.css'
 
 const LandingPage = () => {
@@ -13,7 +12,6 @@ const LandingPage = () => {
     <Banner />
     <FoodCardAreaHeader />
     <CardWrapper />
-    {/* <Footer /> */}
   </div>
   );
 };

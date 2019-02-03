@@ -1,8 +1,5 @@
 import React, {Component} from "react";
-import { withRouter } from 'react-router-dom';
-import { logInUser } from '../../../actions/index';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 class SignInFormArea extends Component {
   state = {
     email: '',
@@ -34,29 +31,35 @@ class SignInFormArea extends Component {
               </div>
               <div className="row">
                 <div className="col-12 form-input">
-                  <p>Email</p>
+                  <label htmlFor="email">
+                    Email
                   <input
                     type="Email"
                     name="email"
+                    id="email"
                     value={this.state.email}
                     placeholder="Enter Email"
                     required="required"
                     onChange={this.handleInputChange}
                   />
+                  </label>
                 </div>
               </div>
               <div className="row password-input">
                 <div className="col-12 form-input">
-                  <p>Password</p>
+                  <label htmlFor="password">
+                    Password
                   <input
                     type="Password"
                     name="password"
+                    id="password"
                     value={this.state.password}
                     placeholder="Enter Password"
                     required="required"
                     onBlur={this.handleBlur}
                     onChange={this.handleInputChange}
                   />
+                  </label>
                 </div>
               </div>
               <div className="row">
@@ -82,7 +85,4 @@ class SignInFormArea extends Component {
   );
 };
 }
-const mapStateToProps = (state) => {
-  return{userToken: state.auth}
-}
-export default withRouter(connect(mapStateToProps, {logInUser})(SignInFormArea));
+export default SignInFormArea

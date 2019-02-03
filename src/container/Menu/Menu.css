@@ -1,0 +1,468 @@
+/*menu style*/
+.fa-shopping-cart {
+  /* line-height: 2rem;
+	padding: 5px; */
+  font-size: 28px;
+}
+#shoppingcart-icon {
+  position: relative;
+}
+#item-count {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  font-size: 16px;
+  border-radius: 100%;
+  background-color: #ff9900;
+  color: #fff;
+}
+.menu-container,
+#overlay-container {
+  margin: 0px;
+  padding: 0px;
+}
+#menu-banner {
+  height: 400px;
+  background-color: #333333;
+  background-image: url("../../../assets/images/pizza.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner-caption-container {
+  width: 100%;
+  min-height: 100%;
+  color: white;
+  font-size: 2.5rem;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#banner-caption {
+  position: absolute;
+  text-shadow: 2px 2px 1px #333333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.food-cards-container {
+  margin: 3% 0;
+  justify-content: center;
+}
+.food-cards-sub-container {
+  justify-content: center;
+  margin-bottom: 3%;
+}
+.food-card {
+  width: 100%;
+  padding: 10px;
+}
+.food-card-child {
+  background-color: #330000;
+  width: 100%;
+  overflow: hidden;
+  padding: 5px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 3px 0px rgba(153, 153, 153, 0.3);
+  border-radius: 10px;
+}
+#available-food {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.menu-food-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.food-image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.food-details ul {
+  display: inline;
+  list-style-type: none;
+}
+.facts {
+  font-weight: bold;
+  font-size: 1em;
+  color: #a58b8b;
+  margin: 0px;
+}
+.order-button,
+.add-to-cart-button {
+  padding-bottom: 10px;
+}
+.order-button button,
+.add-to-cart-button button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #0275d8;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
+  transition-duration: 0.4s;
+}
+.add-to-cart-button button {
+  float: right;
+  background-color: #ff9900;
+}
+/* Pagination links from W3Schools*/
+.pagination a {
+  color: black;
+  font-size: 16px;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+/* Dashboard style */
+
+/*profile style*/
+.profile-container {
+  justify-content: center;
+}
+.down-rule,
+.upper-rule {
+  margin: 30px 0px;
+  border: 1px solid #d0d0d0;
+}
+.profile-picture-container,
+.profile-details-container {
+  width: 100%;
+}
+.profile-details-container {
+  padding: 0px 10px;
+}
+.image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.profile-heading {
+  text-align: center;
+}
+.col-12.profile-details {
+  margin-bottom: 23%;
+}
+#profile-button button,
+#edit-profile-save-button,
+#edit-profile-cancel {
+  width: 100px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 1rem;
+  border: 0px;
+  margin-right: 10px;
+  box-shadow: 0px 5px 3px 0px rgba(116, 113, 113, 0.5);
+  border-radius: 5px;
+  background-color: #005ce6;
+  transition-duration: 0.5s;
+}
+#profile-button a {
+  text-decoration: none;
+}
+.edit-profile-button-area {
+  margin: 20px auto;
+}
+.users-name {
+  text-align: center;
+}
+.order-card {
+  width: 100%;
+  margin: 15px 0px;
+  padding: 15px;
+  border: 0px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 5px #e7e7e7;
+}
+.order-body {
+  width: 100%;
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  display: table;
+  border-color: gray;
+  background-color: transparent;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead,
+th,
+td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #e6e6ff;
+  border-collapse: collapse;
+}
+.order-body table {
+  width: 100%;
+}
+.profile-button-main {
+  margin-bottom: 5%;
+}
+/*edit profile*/
+.edit-first-name input,
+.edit-last-name input,
+.edit-email input,
+.edit-telephone input,
+.edit-address input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  /*border: 1px solid #eaeae1;*/
+  border-radius: 3px;
+}
+.profile-details-fact,
+.edit-first-name p,
+.edit-last-name p,
+.edit-email p,
+.edit-telephone p,
+.edit-address p {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: bold;
+}
+.address-container {
+  margin-bottom: 20px;
+}
+.edit-profile-button-area-container {
+  margin-bottom: 30px;
+}
+#edit-profile-save-button {
+  margin-bottom: 10px;
+}
+.edit-address {
+  padding: 5px;
+}
+#edit-profile-cancel {
+  background-color: #800000;
+}
+.change-photo-text {
+  margin-bottom: 10px;
+}
+.col-12.edit-telephone {
+  margin-bottom: 12%;
+}
+/*style for footer*/
+.footer-container {
+  padding: 0px;
+}
+.footer {
+  padding: 10px 10px;
+  background-color: #330000;
+  color: #ffffff;
+}
+.footer p a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/* pop up Area style */
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  height: auto;
+}
+#total-amount {
+  margin-top: 7%;
+  justify-content: center;
+}
+.menu-form-input input {
+  width: 100%;
+  height: 30px;
+  color: #000;
+  padding-left: 3px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #888;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+.form-input p {
+  font-size: 15px;
+  font-weight: bold;
+}
+#add-button {
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+}
+/* The Close Button */
+#close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modal-order-button {
+  color: #ffffff;
+  float: right;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 5px 3px 0px rgba(116, 113, 113, 0.5);
+  cursor: pointer;
+}
+
+/* alert box style */
+.alert-box {
+  display: none;
+  height: auto;
+  position: fixed;
+  z-index: 1;
+  padding: 5px 10px;
+  top: 0px;
+  background-color: #4a4a4a;
+  color: #fefefe;
+  font-size: 17px;
+}
+.closebtn {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closebtn:hover,
+.closebtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.message {
+  text-align: center;
+  margin-bottom: 3%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .profile-picture-container {
+    width: 50%;
+  }
+  .food-card {
+    width: 50%;
+  }
+  .profile-heading h1 {
+    font-size: 2rem;
+  }
+  .modal-content {
+    width: 50%;
+  }
+  /* alert box*/
+  .alert-box {
+    width: 58.33%;
+    left: 25%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  /*menu style*/
+  .food-card {
+    width: 25%;
+  }
+  #shoppingcart-icon {
+    position: relative;
+  }
+  #item-count {
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: #ff9900;
+    color: #fff;
+  }
+  .order-button button:hover {
+    background-color: #0033cc;
+  }
+  .add-to-cart-button button:hover {
+    background-color: #e68a00ad;
+  }
+  /*Admin page*/
+  #admin-menu {
+    width: 41.66%;
+  }
+  #accepted-oders {
+    width: 41.66%;
+  }
+  #admin-action {
+    width: 58.33%;
+  }
+  .profile-heading h1 {
+    font-size: 2rem;
+  }
+  #profile-button button:hover {
+    cursor: pointer;
+    background-color: #0033cc;
+  }
+  .profile-picture-container {
+    width: 25%;
+  }
+  .profile-details-container {
+    width: 66.66%;
+  }
+  .profile-details-sub-container {
+    margin-bottom: 15px;
+  }
+  .modal-content {
+    width: 25%;
+  }
+  /*edit profile*/
+  #edit-profile-cancel:hover {
+    cursor: pointer;
+    background-color: #990000;
+  }
+  #edit-profile-save-button:hover {
+    cursor: pointer;
+    background: #0033cc;
+  }
+  /* alert box*/
+  .alert-box {
+    left: 25%;
+    width: 58.33%;
+  }
+}
