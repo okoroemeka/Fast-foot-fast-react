@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">68.75% </span>
+        <span class="strong">71.11% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>22/32</span>
+        <span class='fraction'>32/45</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>9/9</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">64.29% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>18/28</span>
+        <span class='fraction'>26/39</span>
       </div>
     </div>
   </div>
@@ -93,7 +93,54 @@
 48
 49
 50
-51</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,13 +188,50 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import fetchFood from '../apis/GetFood';
 import jwt from 'jwt-decode';
 import { actionTypes } from './actionType';
 &nbsp;
-const { logIn, signUp, getMeal, addToCart, CHECK_OUT} = actionTypes;
+const { logIn, 
+  signUp, 
+  getMeal, 
+  addToCart, 
+  CHECK_OUT, 
+  ORDER_HISTORY, 
+  ORDER_HISTORY_ERROR, 
+  DELETE_ORDER,
+  DELETE_ORDER_ERROR,
+  DELETE_ORDER_SUCSESS
+} = actionTypes;
 &nbsp;
 const getAllAvailableFood = () =&gt; async dispatch =&gt; {
   const response = await fetchFood.get('/menu');
@@ -186,20 +270,47 @@ const addToCartAction = (item) =&gt;
 &nbsp;
 const checkout = (orderedMeals) =&gt; async dispatch =&gt; {
   try {
-    const response = await fetchFood.post('orders', orderedMeals);
+    const response = await fetchFood.post('/orders', orderedMeals);
 <span class="cstat-no" title="statement not covered" >    window.localStorage.removeItem('meals');</span>
 <span class="cstat-no" title="statement not covered" >  return dispatch({type: CHECK_OUT, payload: {}});</span>
   } catch (error) {
     return (JSON.stringify(error.message));
   }
 };
-export {getAllAvailableFood, logInUser, signupUser, addToCartAction, checkout}</pre></td></tr>
+&nbsp;
+const getOrderHistory = () =&gt; async dispatch =&gt; {
+  try {
+    const orderHistory = await fetchFood.get('/users/orders');
+<span class="cstat-no" title="statement not covered" >    return dispatch({type: ORDER_HISTORY, payload: orderHistory.data.orders})</span>
+  } catch ({message}) {
+    return dispatch({type: ORDER_HISTORY_ERROR, payload: JSON.stringify(message)})
+  }
+  
+}
+const deleteOrder = (orderId) =&gt; async dispatch =&gt; {
+  try {
+    const response = await fetchFood.delete(`/orders/${orderId}`);
+<span class="cstat-no" title="statement not covered" >    dispatch({type:DELETE_ORDER, payload: response.data.message});</span>
+<span class="cstat-no" title="statement not covered" >    return dispatch({type: 'DELETE_ORDER_SUCSESS', payload: orderId});</span>
+  } catch ({message}) {
+    return dispatch({type: DELETE_ORDER_ERROR, payload: message})
+  }
+}
+export {
+  getAllAvailableFood, 
+  logInUser, 
+  signupUser, 
+  addToCartAction, 
+  checkout,
+  getOrderHistory,
+  deleteOrder,
+}</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 03 2019 11:39:33 GMT+0100 (West Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Feb 04 2019 20:20:46 GMT+0100 (West Africa Standard Time)
 </div>
 </div>
 <script src="../prettify.js"></script>

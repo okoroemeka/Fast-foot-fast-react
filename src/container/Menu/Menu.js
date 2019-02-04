@@ -10,8 +10,8 @@ const MenuPageContainer = ({ cart }) => {
     <div className="container">
       <NavBar>
         <li>
-          <Link className="nav-links" to="/profile">
-            Profile
+          <Link className="nav-links" to="/order-history">
+            history
           </Link>
         </li>
         <li>
