@@ -3,7 +3,14 @@ import axios from 'axios';
 //   render, fireEvent, wait,
 // } from 'react-testing-library';
 import axiosMockAdapter from 'axios-mock-adapter';
-import { getAllAvailableFood, logInUser, signupUser, addToCartAction, checkout} from '../actions/index';
+import { getAllAvailableFood, 
+  logInUser, 
+  signupUser, 
+  addToCartAction, 
+  checkout,
+  deleteOrder,
+  getOrderHistory
+} from '../actions/index';
 
 
 const mockAdapter = new axiosMockAdapter(axios);
@@ -41,6 +48,18 @@ describe('getAllAvailableFood', () => {
     await mockAdapter.onPost().reply(200, response);
     await checkout()(dispatch);
     expect(dispatch).toBeCalledTimes(1);
-  } )
+  })
+  test('successful get order history', async () => {
+    const response = {status: 'Success', message:'Order historry'};
+    await mockAdapter.onGet().reply(200, response);
+    await getOrderHistory()(dispatch);
+    expect(dispatch).toBeCalledTimes(2);
+  })
+  test('successful delete order', async () => {
+    const response = {status: 'Success', message:'Order deleted successfully'};
+    await mockAdapter.onDelete().reply(200, response);
+    await deleteOrder()(dispatch);
+    expect(dispatch).toBeCalledTimes(3);
+  })
 });
 

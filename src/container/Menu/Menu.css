@@ -96,6 +96,7 @@
 .add-to-cart-button {
   padding-bottom: 10px;
 }
+.delete-button,
 .order-button button,
 .add-to-cart-button button {
   padding: 12px 20px;
@@ -109,6 +110,9 @@
   cursor: pointer;
   box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
   transition-duration: 0.4s;
+}
+.delete-button{
+  background-color: #ff9900;
 }
 .add-to-cart-button button {
   float: right;
@@ -144,6 +148,9 @@
 .upper-rule {
   margin: 30px 0px;
   border: 1px solid #d0d0d0;
+}
+.order-header{
+  text-align: center;
 }
 .profile-picture-container,
 .profile-details-container {
