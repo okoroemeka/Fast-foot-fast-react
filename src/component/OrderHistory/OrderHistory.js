@@ -19,14 +19,13 @@ class OrderHistory extends Component {
   }
   render() {
     const { orderHistory } = this.props;
-    console.log('orderHistory', orderHistory);
     const history =
     orderHistory && orderHistory.length && !orderHistory[0].error
         ? (orderHistory.map((order, index) => (
             <tr key={order.id}>
               <td>{order.product.map((item, index) =>{
                 return (
-                  <tr key={index}>
+                  <tr key={index + 1}>
                     <td>{item.food}</td>
                     <td>{item.quantity}</td>
                     <td>&#8358;{item.price}</td>

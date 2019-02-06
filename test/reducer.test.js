@@ -1,8 +1,8 @@
-import cart  from './cart';
-import foods from './food';
-import auth from './auth';
-import deleteOrder from './deleteOrder';
-import orderHistory from './orderHistory';
+import cart  from '../reducers/cart';
+import foods from '../reducers/food';
+import auth from '../reducers/auth';
+import deleteOrder from '../reducers/deleteOrder';
+import orderHistory from '../reducers/orderHistory';
 
 const initialState = {
   isLoggedIn: false,

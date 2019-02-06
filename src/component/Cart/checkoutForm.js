@@ -18,7 +18,6 @@ export class OrderForm extends Component {
       const { history, checkout } = this.props;
       event.preventDefault();
       await checkout(this.state);
-      // window.localStorage.removeItem('meals');
       history.push('/menu');
     } catch (error) {
       return false;
@@ -57,16 +56,16 @@ export class OrderForm extends Component {
             <div className="row">
               <div className="col-12 checkout-form-input">
                 <label html="address">
-Address
-<input
-                  type="text"
-                  name="street"
-                  id="address"
-                  value={this.state.address}
-                  placeholder="Enter street address"
-                  required="required"
-                  onChange={this.handleInputChange}
-                />
+                  Address
+                  <input
+                    type="text"
+                    name="street"
+                    id="address"
+                    value={this.state.address}
+                    placeholder="Enter street address"
+                    required="required"
+                    onChange={this.handleInputChange}
+                  />
                 </label>
               </div>
             </div>
