@@ -22,12 +22,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>4/4</span>
       </div>
     </div>
   </div>
@@ -82,12 +82,28 @@
 37
 38
 39
-40</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+40
+41
+42
+43
+44
+45
+46</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -117,38 +133,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-import { Link } from 'react-router-dom';
-// import "./Banner.css";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 &nbsp;
-const Banner = () =&gt; (
-  &lt;div className="row hero-container"&gt;
-    &lt;div className="col-12 hero" id="hero"&gt;
-      &lt;div className="row overlay-container"&gt;
-        &lt;div className="col-12" id="hero-overlay"&gt;
-          &lt;div className="row caption-container"&gt;
-            &lt;div className="col-10 caption"&gt;
-              &lt;div className="row"&gt;
-                &lt;div className="col-12"&gt;
-                  &lt;p id="home-page-text"&gt;
-                    Home of beautiful Intercontinental cuisins and fast
-                    delivery.
-                  &lt;/p&gt;
-                  &lt;p id="home-page-signup-text"&gt;Sign up and lets feed you&lt;/p&gt;
+const logInStatus = JSON.parse(window.localStorage.getItem("isLoggedIn"));
+const Banner = () =&gt; {
+  const bannerButton = !logInStatus ? (
+    &lt;Fragment&gt;
+      &lt;Link to="signup" id="landingPage-sign-up"&gt;
+        Sign up
+      &lt;/Link&gt;
+      &lt;Link to="login" id="landingPage-logIn-button"&gt;
+        Log In
+      &lt;/Link&gt;
+    &lt;/Fragment&gt;
+  ) : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
+  return (
+    &lt;div className="row hero-container"&gt;
+      &lt;div className="col-12 hero" id="hero"&gt;
+        &lt;div className="row overlay-container"&gt;
+          &lt;div className="col-12" id="hero-overlay"&gt;
+            &lt;div className="row caption-container"&gt;
+              &lt;div className="col-10 caption"&gt;
+                &lt;div className="row"&gt;
+                  &lt;div className="col-12"&gt;
+                    &lt;p id="home-page-text"&gt;
+                      Home of beautiful Intercontinental cuisins and fast
+                      delivery.
+                    &lt;/p&gt;
+                    &lt;p id="home-page-signup-text"&gt;Sign up and lets feed you&lt;/p&gt;
+                  &lt;/div&gt;
                 &lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div className="row landing-page-button-container"&gt;
-                &lt;div className="col-12 home-buttons"&gt;
-                  &lt;Link to="signup" id="landingPage-sign-up"&gt;
-                    Sign up
-                  &lt;/Link&gt;
-                  &lt;Link to="login" id="landingPage-logIn-button"&gt;
-                    Log In
-                  &lt;/Link&gt;
+                &lt;div className="row landing-page-button-container"&gt;
+                  &lt;div className="col-12 home-buttons" &gt;
+                    {bannerButton}
+                  &lt;/div&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
@@ -156,9 +175,8 @@ const Banner = () =&gt; (
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-);
-&nbsp;
+  );
+};
 export default Banner;
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -166,7 +184,7 @@ export default Banner;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Feb 04 2019 20:20:46 GMT+0100 (West Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 06 2019 14:22:33 GMT+0100 (West Africa Standard Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

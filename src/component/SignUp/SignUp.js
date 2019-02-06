@@ -13,8 +13,8 @@ class SignUp extends Component {
   }
   handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await this.props.signupUser(this.state);
-    this.props.history.push('/menu');
+    await this.props.signupUser(this.state);
+    return this.props.isLoggedIn ? this.props.history.push('/menu'): null;
   }
   render() {
     return (

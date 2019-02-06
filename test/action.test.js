@@ -26,40 +26,40 @@ describe('getAllAvailableFood', () => {
     const response = {status: 'Success', message:'Signup successfully'};
     await mockAdapter.onPost().reply(201, response);
     await signupUser()(dispatch);
-    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalled();
   })
   test('succefull login', async() =>{
     const response = {status: 'Success', message:'Welcome to fast-food-fast resturant'};
     await mockAdapter.onPost().reply(200, response);
     await logInUser()(dispatch);
-    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalled();
   })
-  test('successful addding item to cart', ()=> {
+  test('successful addding item to cart', async () => {
     const item = {
       id: 1,
       food: 'yam',
       price:2000,
     }
-    const response = addToCartAction(item)
-    expect(response).toEqual({type:'ADD_TO_CART', payload: item});
+    await addToCartAction(item)(dispatch)
+    expect(dispatch).toBeCalled();
   })
   test('successful checkout', async () => {
     const response = {status: 'Success', message:'Order placed successfully'};
     await mockAdapter.onPost().reply(200, response);
     await checkout()(dispatch);
-    expect(dispatch).toBeCalledTimes(1);
+    expect(dispatch).toBeCalled();
   })
   test('successful get order history', async () => {
     const response = {status: 'Success', message:'Order historry'};
     await mockAdapter.onGet().reply(200, response);
     await getOrderHistory()(dispatch);
-    expect(dispatch).toBeCalledTimes(2);
+    expect(dispatch).toBeCalled();
   })
   test('successful delete order', async () => {
     const response = {status: 'Success', message:'Order deleted successfully'};
     await mockAdapter.onDelete().reply(200, response);
     await deleteOrder()(dispatch);
-    expect(dispatch).toBeCalledTimes(3);
+    expect(dispatch).toBeCalled();
   })
 });
 

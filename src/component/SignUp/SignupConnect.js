@@ -4,6 +4,9 @@ import SignUpFormArea from './SignUp';
 import { signupUser } from '../../../actions';
 
 const mapStateToProps = (state) =>{
-  return {userToken: state.auth}
+  return {
+    userToken: state.auth,
+    isLoggedIn: state.auth.isLoggedIn,
+  }
 }
 export default withRouter(connect(mapStateToProps, {signupUser})(SignUpFormArea));

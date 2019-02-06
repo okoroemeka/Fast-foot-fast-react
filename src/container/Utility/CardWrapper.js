@@ -1,6 +1,5 @@
 import React , {Component} from 'react';
 import { getAllAvailableFood } from '../../../actions/index';
-import {connect} from 'react-redux'
 import FoodCard from '../../component/PopularFood/FoodCard';
 
 class cardWrapper extends Component {

@@ -26,7 +26,7 @@ class OrderHistory extends Component {
             <tr key={order.id}>
               <td>{order.product.map((item, index) =>{
                 return (
-                  <tr key={index}>
+                  <tr key={index + 1}>
                     <td>{item.food}</td>
                     <td>{item.quantity}</td>
                     <td>&#8358;{item.price}</td>
