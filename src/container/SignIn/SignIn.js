@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import SigninFormArea from "../../component/SignIn/SigninConnect";
-import NavigationBar from "../../component/SignIn/NavBar";
 import "./SignIn.css";
 class FormWrapper extends Component {
   render() {
     return (
       <div className="signin-container">
         <div className="signin-overlay">
-          <NavigationBar />
           <SigninFormArea />
         </div>
       </div>

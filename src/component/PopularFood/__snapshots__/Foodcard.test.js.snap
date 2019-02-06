@@ -11,13 +11,9 @@ Object {
         <div
           class="col-12"
         >
-          <a
-            href="menu.html"
-          >
-            <img
-              class="food-image"
-            />
-          </a>
+          <img
+            class="food-image"
+          />
           <div
             class="row food-descrition-container"
           >
@@ -59,13 +55,9 @@ Object {
       <div
         class="col-12"
       >
-        <a
-          href="menu.html"
-        >
-          <img
-            class="food-image"
-          />
-        </a>
+        <img
+          class="food-image"
+        />
         <div
           class="row food-descrition-container"
         >

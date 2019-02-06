@@ -1,29 +1,11 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import MenuPage from "../../component/Menu/MenuConnect";
-import NavBar from "../../component/Menu/NavBar";
 import "./Menu.css";
 
 const MenuPageContainer = ({ cart }) => {
   return (
     <div className="container">
-      <NavBar>
-        <li>
-          <Link className="nav-links" to="/order-history">
-            history
-          </Link>
-        </li>
-        <li>
-          <Link className="nav-links" to="/cart">
-            <i className="fa fa-shopping-cart" id="shoppingcart-icon">
-              <div id="item-count">
-                <span id="count">{cart ? Object.keys(cart).length : 0}</span>
-              </div>
-            </i>
-          </Link>
-        </li>
-      </NavBar>
       <MenuPage />
     </div>
   );

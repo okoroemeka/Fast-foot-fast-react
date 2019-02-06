@@ -13,7 +13,7 @@ class SignInFormArea extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     await this.props.logInUser(this.state);
-    this.props.history.push('/menu');
+    return this.props.isLoggedIn ? this.props.history.push('/menu'): null;
   }
   render(){
   return (

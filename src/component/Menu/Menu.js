@@ -3,8 +3,13 @@ import FoodCard from "./FoodCard";
 
 class MenuPage extends Component {
 
-  handleAddToCart = (mealClicked) => {
+  handleAddToCart = mealClicked => {
     this.props.addToCartAction(mealClicked);
+  }
+  handleOrderNow = mealClicked => {
+    const { history } = this.props
+    this.props.addToCartAction(mealClicked);
+    history.push('/cart');
   }
   componentDidMount() {
     this.props.getAllAvailableFood();

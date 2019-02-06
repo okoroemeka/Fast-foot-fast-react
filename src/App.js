@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-// import { ToastContainer } from 'react-toastify';
+import { ToastContainer, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+import NavBar from './component/NavBar/NavigationLandingPage';
 import LandingPage from "./container/Landing/LandingPage";
 import Footer from "./container/Footer";
 import SignInPage from "./container/SignIn/SignIn";
@@ -8,13 +10,13 @@ import SignUpPage from './container/SignUp/SignUp';
 import MenuPage from './container/Menu/Menu';
 import CartPage from './container/Cart/Cart';
 import Checkout from './container/Cart/checkoutForm';
-// import OrderHistory from './component/OrderHistory/OrderHistory';
 import OrderHistory from './container/OrderHistory/OrderHistory';
 
 const App = () => (
   <div>
     <BrowserRouter>
       <React.Fragment>
+        <NavBar />
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/login" component={SignInPage} />
@@ -25,6 +27,7 @@ const App = () => (
           <Route path="/order-history" component={OrderHistory} />
         </Switch>
         <Footer />
+        <ToastContainer transition={Flip} position="bottom-right" autoClose={3000}/>
       </React.Fragment>
     </BrowserRouter>
   </div>

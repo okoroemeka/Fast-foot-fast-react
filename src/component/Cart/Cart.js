@@ -12,15 +12,14 @@ class ShoppingCart extends Component {
     return this.setState({...this.state,[name]: value});
   }
   handleCheckout = () => {
-    const logInStatus  = JSON.parse(window.localStorage.getItem('logInStatus'));
-    return logInStatus && logInStatus.isLoggedIn ? this.props.history.push('/checkout') : this.props.history.push('/login');
+    const logInStatus  = JSON.parse(window.localStorage.getItem('isLoggedIn'));
+    return logInStatus ? this.props.history.push('/checkout') : this.props.history.push('/login');
   } 
   handleCancelOrder = () => {
     window.localStorage.removeItem('meals');
     return this.props.history.push('/menu');
   }
   render() {
-    // orderedMeals = JSON.parse(window.localStorage.getItem("meals"));
     const { cart } = this.props;
     orderedMeals = Object.values(cart).map(meal => {
         return (

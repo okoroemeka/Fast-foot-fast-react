@@ -1,54 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1549308046716" clover="3.2.0">
-  <project timestamp="1549308046716" name="All files">
-    <metrics statements="85" coveredstatements="71" conditionals="22" coveredconditionals="20" methods="28" coveredmethods="27" elements="135" coveredelements="118" complexity="0" loc="85" ncloc="85" packages="7" files="14" classes="14">
+<coverage generated="1549459353329" clover="3.2.0">
+  <project timestamp="1549459353329" name="All files">
+    <metrics statements="100" coveredstatements="80" conditionals="26" coveredconditionals="21" methods="29" coveredmethods="28" elements="155" coveredelements="129" complexity="0" loc="100" ncloc="100" packages="7" files="14" classes="14">
       <package name="actions">
-        <metrics statements="40" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="13"/>
+        <metrics statements="51" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="14"/>
         <file name="actionType.js" path="/Users/nnaemekaokoro/Desktop/Fast-foot-fast-react/actions/actionType.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="4" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/nnaemekaokoro/Desktop/Fast-foot-fast-react/actions/index.js">
-          <metrics statements="39" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="13"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
-          <line num="18" count="1" type="stmt"/>
+          <metrics statements="50" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="14"/>
           <line num="19" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
           <line num="22" count="1" type="stmt"/>
           <line num="23" count="1" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
-          <line num="25" count="0" type="stmt"/>
-          <line num="26" count="0" type="stmt"/>
-          <line num="27" count="0" type="stmt"/>
-          <line num="28" count="0" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="34" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
           <line num="35" count="1" type="stmt"/>
           <line num="36" count="1" type="stmt"/>
-          <line num="37" count="0" type="stmt"/>
-          <line num="38" count="0" type="stmt"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="40" count="0" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
           <line num="42" count="1" type="stmt"/>
-          <line num="47" count="1" type="stmt"/>
-          <line num="48" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
           <line num="52" count="1" type="stmt"/>
-          <line num="53" count="1" type="stmt"/>
-          <line num="54" count="1" type="stmt"/>
-          <line num="55" count="0" type="stmt"/>
-          <line num="56" count="0" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
           <line num="58" count="1" type="stmt"/>
-          <line num="62" count="1" type="stmt"/>
-          <line num="63" count="1" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
           <line num="64" count="1" type="stmt"/>
-          <line num="65" count="0" type="stmt"/>
-          <line num="67" count="1" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
           <line num="71" count="1" type="stmt"/>
           <line num="72" count="1" type="stmt"/>
-          <line num="73" count="1" type="stmt"/>
-          <line num="74" count="0" type="stmt"/>
-          <line num="75" count="0" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
           <line num="77" count="1" type="stmt"/>
+          <line num="78" count="1" type="stmt"/>
+          <line num="79" count="0" type="stmt"/>
+          <line num="81" count="1" type="stmt"/>
+          <line num="85" count="1" type="stmt"/>
+          <line num="86" count="1" type="stmt"/>
+          <line num="87" count="1" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
+          <line num="90" count="0" type="stmt"/>
+          <line num="92" count="1" type="stmt"/>
+          <line num="93" count="1" type="stmt"/>
         </file>
       </package>
       <package name="apis">
@@ -58,15 +69,17 @@
         </file>
       </package>
       <package name="reducers">
-        <metrics statements="27" coveredstatements="26" conditionals="22" coveredconditionals="20" methods="6" coveredmethods="5"/>
+        <metrics statements="29" coveredstatements="26" conditionals="24" coveredconditionals="20" methods="6" coveredmethods="5"/>
         <file name="auth.js" path="/Users/nnaemekaokoro/Desktop/Fast-foot-fast-react/reducers/auth.js">
-          <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <metrics statements="8" coveredstatements="6" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
           <line num="3" count="3" type="stmt"/>
           <line num="4" count="3" type="stmt"/>
-          <line num="8" count="8" type="cond" truecount="3" falsecount="0"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="12" count="1" type="stmt"/>
-          <line num="14" count="6" type="stmt"/>
+          <line num="9" count="8" type="cond" truecount="3" falsecount="2"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="6" type="stmt"/>
         </file>
         <file name="cart.js" path="/Users/nnaemekaokoro/Desktop/Fast-foot-fast-react/reducers/cart.js">
           <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
@@ -106,19 +119,21 @@
         </file>
       </package>
       <package name="src.component.Banner">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <file name="Banner.js" path="/Users/nnaemekaokoro/Desktop/Fast-foot-fast-react/src/component/Banner/Banner.js">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
           <line num="5" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
+          <line num="6" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.component.PopularFood">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <file name="FoodCard.js" path="/Users/nnaemekaokoro/Desktop/Fast-foot-fast-react/src/component/PopularFood/FoodCard.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="2" count="1" type="stmt"/>
           <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
         </file>
         <file name="FoodCardAreaHeader.js" path="/Users/nnaemekaokoro/Desktop/Fast-foot-fast-react/src/component/PopularFood/FoodCardAreaHeader.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

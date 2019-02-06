@@ -1,14 +1,10 @@
 import React from "react";
+
 const foodCard = props => (
   <div className="card">
     <div className="col-12">
-      <a href="menu.html">
-        <img
-          src={props.mealImage}
-          className="food-image"
-          alt={props.foodName}
-        />
-      </a>
+      <img src={props.mealImage} className="food-image" alt={props.foodName} />
+
       <div className="row food-descrition-container">
         <div className="col-7 food-descrition">
           <ul className="food-name-ul">
