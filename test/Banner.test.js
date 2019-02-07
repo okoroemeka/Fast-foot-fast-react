@@ -4,7 +4,7 @@ import 'jest-dom/extend-expect';
 import {Router} from 'react-router-dom'
 import {createMemoryHistory} from 'history'
 import { render, cleanup } from 'react-testing-library';
-import Banner from './Banner';
+import Banner from '../src/component/Banner/Banner';
 
 
 afterEach(cleanup);

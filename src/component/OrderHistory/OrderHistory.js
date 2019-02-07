@@ -19,7 +19,6 @@ class OrderHistory extends Component {
   }
   render() {
     const { orderHistory } = this.props;
-    console.log('orderHistory', orderHistory);
     const history =
     orderHistory && orderHistory.length && !orderHistory[0].error
         ? (orderHistory.map((order, index) => (

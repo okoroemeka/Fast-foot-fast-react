@@ -1,7 +1,5 @@
 import axios from 'axios';
-// import {
-//   render, fireEvent, wait,
-// } from 'react-testing-library';
+
 import axiosMockAdapter from 'axios-mock-adapter';
 import { getAllAvailableFood, 
   logInUser, 
@@ -59,6 +57,12 @@ describe('getAllAvailableFood', () => {
     const response = {status: 'Success', message:'Order deleted successfully'};
     await mockAdapter.onDelete().reply(200, response);
     await deleteOrder()(dispatch);
+    expect(dispatch).toBeCalled();
+  })
+  test('order history', async() =>{
+    const response = {status: 'Success', message:'succefully get order history'};
+    await mockAdapter.onPost().reply(200, response);
+    await getOrderHistory()(dispatch);
     expect(dispatch).toBeCalled();
   })
 });

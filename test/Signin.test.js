@@ -10,9 +10,9 @@ import 'react-testing-library/cleanup-after-each';
 import 'jest-dom/extend-expect';
 import MockAdapter from 'axios-mock-adapter';
 import thunk from 'redux-thunk';
-import reducers from '../../../reducers';
-import Signin from './Signin';
-import axiosInstance from '../../../apis/GetFood';
+import reducers from '../reducers';
+import Signin from '../src/component/SignIn/Signin';
+import axiosInstance from '../apis/GetFood';
 
 const axiosMock = new MockAdapter(axiosInstance, { delayResponse: 500 });
 const store = createStore(reducers, applyMiddleware(thunk));
@@ -40,6 +40,7 @@ describe('SignInForm', () => {
   let signInComponent;
 
   const props = {
+    isLoggedIn:true,
     history,
     logInUser: jest.fn()
   }

@@ -11,6 +11,7 @@ import MenuPage from './container/Menu/Menu';
 import CartPage from './container/Cart/Cart';
 import Checkout from './container/Cart/checkoutForm';
 import OrderHistory from './container/OrderHistory/OrderHistory';
+import NopageFound from './component/404/404Page';
 
 const App = () => (
   <div>
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/cart" component={CartPage} />
           <Route path="/checkout" component={Checkout} />
           <Route path="/order-history" component={OrderHistory} />
+          <Route component={NopageFound} />
         </Switch>
         <Footer />
         <ToastContainer transition={Flip} position="bottom-right" autoClose={3000}/>

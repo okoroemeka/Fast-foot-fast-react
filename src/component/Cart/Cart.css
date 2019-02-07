@@ -13,8 +13,9 @@
 #cart-subcontainer {
   margin: 5% auto;
 }
-.fa-remove {
+.fa-trash {
   font-size: 26px;
+  color: #880909;
 }
 .table {
   width: 100%;

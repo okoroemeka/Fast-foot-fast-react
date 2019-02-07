@@ -5,7 +5,6 @@ const initialState = {
   isLoggedIn: false,
 }
 export default (state = initialState, action) => {
-  // const {type, payload} = this.props;
   switch (action.type) {
     case logIn:
       return { ...state, userData: action.payload, isLoggedIn: true };
