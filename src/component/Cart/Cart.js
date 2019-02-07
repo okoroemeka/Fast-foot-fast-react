@@ -33,7 +33,9 @@ class ShoppingCart extends Component {
   }
   render() {
     const { cart } = this.props;
+    let total = 0;
     orderedMeals = Object.values(cart).map(meal => {
+        total += meal.price;
         return (
           <tr key={meal.id}>
             <td className="food-name">{meal.food}</td>
@@ -94,7 +96,7 @@ class ShoppingCart extends Component {
               <div className="row">
                 <div className="col-4">
                   <div className="order-total">
-                    <span id="cost" ></span>
+                    <span id="cost" >Total:<span>&#8358;</span> {total}</span>
                   </div>
                 </div>
                 <div className="col-8">
