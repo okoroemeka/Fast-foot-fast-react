@@ -64,6 +64,22 @@ describe('Test reducers', () => {
     const response = auth(initialState, action);
     expect(response).toEqual({isLoggedIn:true, userData:{}});
   });
+  test('login reducer',()=>{
+    const action = {
+      type: 'LOG_IN_ERROR',
+      payload:{}
+    };
+    const response = auth(initialState, action);
+    expect(response).toEqual({isLoggedIn:false, logInError:{}});
+  });
+  test('logout reducer',()=>{
+    const action = {
+      type: 'LOG_OUT',
+      payload:{}
+    };
+    const response = auth(initialState, action);
+    expect(response).toEqual({isLoggedIn:false, userData:{}});
+  });
   test('signup reducer', ()=>{
     const action = {
       type: 'SIGN_UP',
@@ -71,6 +87,14 @@ describe('Test reducers', () => {
     };
     const response = auth(initialState, action);
     expect(response).toEqual({isLoggedIn:true, userData:{}});
+  })
+  test('signup reducer', ()=>{
+    const action = {
+      type: 'SIGN_UP_ERROR',
+      payload:{}
+    };
+    const response = auth(initialState, action);
+    expect(response).toEqual({isLoggedIn:false, signUpError:{}});
   })
   test('successful delete order', ()=>{
     const action = {

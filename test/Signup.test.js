@@ -10,9 +10,9 @@ import 'react-testing-library/cleanup-after-each';
 import 'jest-dom/extend-expect';
 import MockAdapter from 'axios-mock-adapter';
 import thunk from 'redux-thunk';
-import reducers from '../../../reducers';
-import SignUp from './SignUp';
-import axiosInstance from '../../../apis/GetFood';
+import reducers from '../reducers';
+import SignUp from '../src/component/SignUp/SignUp';
+import axiosInstance from '../apis/GetFood';
 // import { gmail } from 'cluster';
 
 const axiosMock = new MockAdapter(axiosInstance, { delayResponse: 500 });
@@ -46,6 +46,7 @@ describe('SignupForm', () => {
   let signupComponent;
 
   const props = {
+    isLoggedIn: true,
     history,
     signupUser: jest.fn()
   }

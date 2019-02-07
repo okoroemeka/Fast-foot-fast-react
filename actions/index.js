@@ -17,7 +17,8 @@ const {
   DELETE_ORDER,
   DELETE_ORDER_ERROR,
   LOG_OUT,
-  LOG_OUT_ERROR
+  LOG_OUT_ERROR, 
+  DELETE_FROM_CART
 } = actionTypes;
 
 const getAllAvailableFood = () => async dispatch => {
@@ -106,6 +107,12 @@ const deleteOrder = orderId => async dispatch => {
     return dispatch({type: DELETE_ORDER_ERROR, payload: message})
   }
 }
+const deleteItem = itemId => {
+  return {
+    type: DELETE_FROM_CART,
+    payload: itemId
+  }
+}
 export {
   getAllAvailableFood, 
   logInUser, 
@@ -114,5 +121,6 @@ export {
   checkout,
   getOrderHistory,
   deleteOrder,
-  logOut
+  logOut,
+  deleteItem
 }

@@ -9,6 +9,10 @@ export default (state = {}, action) => {
         }};
     case 'CHECK_OUT':
       return {};
+    case 'DELETE_FROM_CART':
+      const { [payload]: _, ...newState } = state
+      console.log('just a logged item', payload, newState)
+      return newState
     default:
       return state;
   }

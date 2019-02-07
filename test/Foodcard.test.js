@@ -2,8 +2,8 @@ import React from 'react';
 import 'react-testing-library/cleanup-after-each';
 import 'jest-dom/extend-expect';
 import { render, cleanup } from 'react-testing-library';
-import FoodCardAreaHeader from './FoodCardAreaHeader';
-import FoodCard from './FoodCard';
+import FoodCardAreaHeader from '../src/component/PopularFood/FoodCardAreaHeader';
+import FoodCard from '../src/component/PopularFood/FoodCard';
 
 
 

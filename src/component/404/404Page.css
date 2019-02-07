@@ -1,0 +1,9 @@
+#no-page-found{
+  text-align: center;
+  margin: 15% auto;
+}
+#no-page-num,
+#no-page-text{
+  font-size: 3rem;
+  color: gray;
+}

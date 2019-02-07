@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { toast } from 'react-toastify';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { deleteItem } from '../../../actions/index';
 import "./Cart.css";
 let orderedMeals;
 class ShoppingCart extends Component {
@@ -18,6 +20,16 @@ class ShoppingCart extends Component {
   handleCancelOrder = () => {
     window.localStorage.removeItem('meals');
     return this.props.history.push('/menu');
+  }
+  handleRemoveFood = (id) => {
+    return (event) => {
+      const {deleteItem} = this.props;
+      deleteItem(id);
+      toast.success('Item removed');
+      if (event.target.checked) {
+        return this.removeFood
+      }
+    }
   }
   render() {
     const { cart } = this.props;
@@ -40,7 +52,7 @@ class ShoppingCart extends Component {
               &#8358; <span className="price">{meal.price}</span>
             </td>
             <td>
-              <input type="checkbox" className="check" />
+              <input type="checkbox" className="check" onChange={this.handleRemoveFood(meal.id)}/>
             </td>
           </tr>
         );
@@ -70,7 +82,7 @@ class ShoppingCart extends Component {
                           <th>quantity</th>
                           <th>price</th>
                           <th>
-                            <i className="fa fa-remove" />
+                          <i className="fa fa-trash" aria-hidden="true"></i>
                           </th>
                         </tr>
                         {orderedMeals}
@@ -123,4 +135,4 @@ const mapStateToProps = (state) =>
   ({
     cart: state.cart,
   })
-export default withRouter(connect(mapStateToProps, null)(ShoppingCart))
+export default withRouter(connect(mapStateToProps, {deleteItem})(ShoppingCart))
